@@ -617,6 +617,7 @@ footer .fa-heart {
         width: auto;
         position: relative;
         height: auto;
+        z-index: 0;
     }
     .right-container {
         width: 100%;
