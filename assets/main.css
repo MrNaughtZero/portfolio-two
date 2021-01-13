@@ -254,6 +254,8 @@ progress::-webkit-progress-bar {
 .services-container {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    left: 25px;
 }
 
 .services {
@@ -267,6 +269,7 @@ progress::-webkit-progress-bar {
     margin-right: 10px;
     margin-bottom: 10px;
     display: flex;
+    border-radius: 4px;
 }
 
 .services-icon {
