@@ -12,10 +12,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* .right-container, .contact {
-    overflow-x: hidden;
-} */
-
 h1,h2,h3,h4,h5,h6 {
     font-weight: 800;
     text-transform: uppercase;
@@ -244,7 +240,6 @@ progress::-webkit-progress-bar {
 .about {
     background-color: #aaffa7;
     position: relative;
-    /* overflow: hidden; */
 }
 
 .about-text {
@@ -392,6 +387,7 @@ footer {
     padding: 10px;
     color: white;
     text-align: center;
+    margin-bottom: -10px;
 }
 
 footer .fa-heart {
@@ -434,12 +430,15 @@ footer .fa-heart {
         max-width:70%;
     }
 }
+@media screen and (min-width:901px){
+    html, body {
+        overflow-x: hidden;
+    }
+}
 
 @media screen and (max-width:900px){
     /* enforce mobile mode */
-    /* html, body {
-        overflow-x: auto;
-    } */
+    
     header {
         width: auto;
         position: relative;
