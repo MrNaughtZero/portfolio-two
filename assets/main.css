@@ -9,6 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -75,83 +76,8 @@ ul {
     padding: 40px 60px;
 }
 
-/* nav */
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 10px;;
-}
-
-.nav-left {
-    display: flex;
-    padding-left: 5px;
-}
-
-.nav-name-img {
-    display: flex;
-}
-
-.nav-left i {
-    font-size: 27px;
-    position: relative;
-    top: 8px;
-}
-
-img.nav-profile-pic {
-    padding: 0 10px;
-    border-radius: 50%;
-    position: relative;
-    top: 4px;
-}
-
-h3.nav-name {
-    position: relative;
-    top: -24px;
-    font-size: 23px;
-}
-
-.nav-icons i {
-    font-size: 19px;
-}
-
-.nav-icons i:not(:last-child){
-    padding-right: 15px;
-}
-
-.nav-icons {
-    padding: 10px;
-}
-
-.nav-links {
-    position: relative;
-    left: 20px;
-    top: -200px;
-    display: none;
-}
-
-.nav-links ul li {
-    display: inline-block;
-    font-size: 19px;
-    padding-right: 4px;
-}
-
-#close-menu {
-    display: none;
-}
-
-/* nav animations */
-.slide-up-menu {
-    transition: 22s ease-in-out;
-    position: relative;
-    top: -300px;
-}
-
-.slide-down-nav {
-    transition: 2s ease in;
-    position: relative;
-    top: -39px;
-    left: -241px;
+span#heading-emoji {
+    font-size: 32px;
 }
 
 /* header */
@@ -209,6 +135,32 @@ h1#hello-there {
 
 .header-buttons button:first-child {
     margin-right: 10px;
+}
+
+/* emojis */
+
+.heading-emoji {
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    font-size: 28px;
+}
+
+.heading-emoji.emoji-about {
+    position: relative;
+    top: 1px;
+}
+
+.heading-emoji.heading-spanner-emoji {
+    padding-right: 5px;
+}
+
+.heading-emoji.heading-spanner-emoji {
+    top: -1px;
+}
+
+.heading-emoji.emoji-work {
+    padding-right: 8px;
 }
 
 /* right container // skills,experiences,services */
@@ -274,96 +226,20 @@ progress::-webkit-progress-bar {
     font-weight: 500;
     padding-bottom: 3px;
 }
-/* experience */
+/* about me */
 
-.experience {
+.about {
     background-color: #aaffa7;
     position: relative;
     overflow: hidden;
 }
 
-.timeline-flex {
-    display: flex;
-}
-
-.timeline {
+.about-text {
+    padding-left: 20px;
     position: relative;
+    left: 12px;
+    max-width: 90%;
 }
-
-.timeline-flexed-block {
-    width: 50%;
-}
-
-.timeline-right {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    right: 55px;
-}
-
-.timeline-left, .timeline-right {
-    position: relative;
-}
-
-.timeline-block {
-    width: 70%;
-}
-
-h4.timeline-date {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 1px;
-    font-weight: 400;
-    width: 100px;
-    text-align: center;
-    border-radius: 3px;
-    margin-bottom: -10px;
-}
-
-/* timeline line and dot styles */
-
-.timeline-left:before {
-    content: " ";
-    position: absolute;
-    left: -46px;
-    background-color: var(--black);
-    height: 19px;
-    width: 18px;
-    top: 10%;
-    border-radius: 50%;
-}
-
-.timeline-left::after {
-    content: " ";
-    height: 260px;
-    width: 2px;
-    background-color: black;
-    position: absolute;
-    left: -37px;
-    top: 17%;
-}
-
-.timeline-right:before {
-    content: " ";
-    position: absolute;
-    right: -28px;
-    background-color: var(--black);
-    height: 19px;
-    width: 18px;
-    top: 10%;
-    border-radius: 50%;
-}
-
-.timeline-right::after {
-    content: " ";
-    height: 188px;
-    width: 2px;
-    background-color: black;
-    position: absolute;
-    right: -20px;
-    top: 18%;
-}
-
 
 /* services */
 
@@ -372,10 +248,12 @@ h4.timeline-date {
 }
 
 .services-block {
-    background: white;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+}
+
+.services-block:not(:last-child){
+   border-right: 1px solid #7f888f; 
 }
 
 .services-icon {
@@ -494,18 +372,6 @@ footer .fa-heart {
 
 
 /* media queries */
-
-@media screen and (max-width:1690px){
-    /* experience styling */
-    .timeline-left::after {
-        height: 260px;
-    }
-    .timeline-right::after {
-        height: 260px;
-        top: -17%;
-    }
-}
-
 @media screen and (min-width:1639px){
     .work-grid {
         justify-content: end!important;
@@ -521,19 +387,12 @@ footer .fa-heart {
         width: 60%;
         left: 40%;
     }
-    /* experience styling */
-    .timeline-right::after {
-        top: -10%;
-    }
 }
 
-@media screen and (max-width:1440px){
-    /* experience styling */
-    .timeline-block {
-        width: 80%;
-    }
-    .timeline-right::after {
-        top: -7%;
+@media screen and (max-width:1439px){
+    .services-block:not(:last-child) {
+        border-right: 0px;
+        border-bottom: 1px solid #7f888f;
     }
 }
 
@@ -544,7 +403,7 @@ footer .fa-heart {
     }
     .services-block {
         margin-right: 20px;
-        max-width: 400px;
+        max-width: 30%;
     }
 }
 
