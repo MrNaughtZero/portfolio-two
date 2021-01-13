@@ -264,7 +264,6 @@ progress::-webkit-progress-bar {
     width: 40%;
     padding: 20px;
     background: #F3F6FD;
-    margin-right: 10px;
     margin-bottom: 10px;
     display: flex;
     border-radius: 4px;
@@ -434,6 +433,9 @@ footer .fa-heart {
 @media screen and (min-width:901px){
     html, body {
         overflow-x: hidden;
+    }
+    .services-block {
+        margin-right: 10px;
     }
 }
 
