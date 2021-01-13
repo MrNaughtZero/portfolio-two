@@ -437,9 +437,9 @@ footer .fa-heart {
 
 @media screen and (max-width:900px){
     /* enforce mobile mode */
-    html, body {
+    /* html, body {
         overflow-x: auto;
-    }
+    } */
     header {
         width: auto;
         position: relative;
