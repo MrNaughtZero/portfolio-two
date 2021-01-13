@@ -254,8 +254,6 @@ progress::-webkit-progress-bar {
 .services-container {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    left: 25px;
 }
 
 .services {
