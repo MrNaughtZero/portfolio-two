@@ -244,7 +244,7 @@ progress::-webkit-progress-bar {
 .about {
     background-color: #aaffa7;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .about-text {
