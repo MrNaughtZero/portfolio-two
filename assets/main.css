@@ -306,7 +306,6 @@ progress::-webkit-progress-bar {
 .work-block {
     display: flex;
 }
-
 .work-img {
     max-width: 70%;
 }
@@ -483,6 +482,14 @@ footer .fa-heart {
     .work-block {
         flex-wrap: wrap;
         margin-bottom: 20px;
+        padding: 30px;
+    }
+    .work-block:not(:last-child){
+        border-bottom: 2px solid #E8E8E8;
+    }
+    
+    h3.website-heading {
+        margin-bottom: -10px;
     }
     .work-text {
         width: 100%;
@@ -490,6 +497,7 @@ footer .fa-heart {
     .work-img {
         max-width: 100%;
     }
+    
 }
 
 @media screen and (max-width:638px){
