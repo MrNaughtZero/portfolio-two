@@ -12,7 +12,7 @@ html, body {
     scroll-behavior: smooth;
 }
 
-main {
+.right-container {
     overflow-x: hidden;
 }
 
