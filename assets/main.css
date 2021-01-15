@@ -340,8 +340,7 @@ span.view-more-text {
 }
 
 .view-more-projects {
-    display: inline-block;
-    padding-left: 20px;
+    text-align: center;
 }
 
 
