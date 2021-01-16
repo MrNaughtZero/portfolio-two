@@ -106,22 +106,29 @@ header {
     justify-content: center;
 }
 
+.header-image {
+    display: flex;
+}
+
 .profile-img {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--yellow);
     padding: 2px;
+    width: 140px;
+    height: 140px;
 }
 
-.profile-img-alt {
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--yellow);
-    padding: 2px;
+.profile-img-two {
+    position: relative;
+    right: 44px;
+    z-index: -1;
 }
 
-.header-image img:hover {
-    display: none;
+.profile-img-three {
+    position: relative;
+    right: 78px;
+    z-index: -2;
 }
 
 h1#hello-there {
@@ -442,18 +449,30 @@ footer .fa-heart {
     }
 }
 
+@media screen and (min-width:901px) and (max-width:1050px){
+    .profile-img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
 @media screen and (max-width:1000px){
     /* contact */
     .contact-additional-wrapper {
         max-width:70%;
     }
 }
+
 @media screen and (min-width:901px){
     html, body {
         overflow-x: hidden;
     }
     .services-block {
         margin-right: 10px;
+    }
+    .header-image {
+        position: relative;
+        right: 9px;
     }
 }
 
@@ -495,6 +514,11 @@ footer .fa-heart {
     /* services */
     .services-block {
         max-width: 97%;
+    }
+    /* hide additonal photos */
+    .profile-img {
+        width: 100px;
+        height: 100px;
     }
 }
 
